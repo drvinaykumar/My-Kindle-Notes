@@ -1,0 +1,78 @@
+/* Styles specific to individual note pages */
+.note-page .header-content {
+  justify-content: space-between;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.note-content {
+  background-color: var(--card-color);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.note-content p {
+  margin-bottom: 1.5rem;
+}
+
+.note-content p:last-child {
+  margin-bottom: 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: white;
+  text-decoration: underline;
+}
+
+/* Mobile styles for note pages */
+@media (max-width: 767px) {
+  .note-page .site-title {
+    font-size: 1.2rem;
+    max-width: 70%;
+  }
+  
+  .back-button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .note-content {
+    padding: 1.5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  header, footer, .back-to-top {
+    display: none;
+  }
+  
+  .note-content {
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  body {
+    font-size: 12pt;
+    color: black;
+    background: white;
+  }
+}
